@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Title : To generate a Multiplication Table of a given number</h2>
+    <div class="forloop">
+      <h3>Using "FOR LOOP"</h3>
+      <label for="numfor">Enter a number : </label>
+      <input
+        type="number"
+        id="numfor"
+        min="0"
+        placeholder="Enter a value"
+      /><br /><br />
+      <button onclick="multiplyfor()">Calculate</button>
+      <p>Multiplication Table: <br /><span id="displayfor"></span></p>
+    </div>
+    <div class="whileloop">
+      <h3>Using "WHILE LOOP"</h3>
+      <label for="numwhile">Enter a number : </label>
+      <input
+        type="number"
+        id="numwhile"
+        min="0"
+        placeholder="Enter a value"
+      /><br /><br />
+      <button onclick="multiplywhile()">Calculate</button>
+      <p>Multiplication Table: <br /><span id="displaywhile"></span></p>
+    </div>
+    <div class="dowhileloop">
+      <h3>Using "DO-WHILE LOOP"</h3>
+      <label for="numdowhile">Enter a number : </label>
+      <input
+        type="number"
+        id="numdowhile"
+        min="0"
+        placeholder="Enter a value"
+      /><br /><br />
+      <button onclick="multiplydowhile()">Calculate</button>
+      <p>
+        Multiplication Table: <br />
+        <span id="displaydowhile"></span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
