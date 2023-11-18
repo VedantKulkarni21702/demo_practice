@@ -1,0 +1,97 @@
+<!Concept of Arrays & array objects in JavaScript>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 7</title>
+    <style>
+        #tablestyle {
+            font-family: 'Times New Roman', Times, serif;
+            border-collapse: collapse;
+            width: 20%;
+        }
+        #tablestyle td, #tablestyle th {
+            border: 1px solid;
+            padding: 8px;
+            background-color: #dbfecf;
+        }
+    </style>
+</head>
+<body id = "body" style = "text-align:center;">
+    <H1>JavaScript Experiment 7</H1>
+    <H3>Name: Vedant Kulkarni <br> Roll No: 42438 <br> Batch: Q8</H3>
+    Please enter the Array to begin operations
+    <br><br>
+    <h3>Enter the Array</h3>
+    Enter the length of the array: 
+    <input id="arrlen" placeholder="Array Length">
+    <br><br>
+    Enter an Element and click add element: 
+    <input id="arrEle" placeholder="Array Element">
+    <br><br>
+    <button id = "AddElement" onclick = "AddElement()">Add Element</button>
+    <br><br>
+    The Array is now: <b><span id="ArrOut">Empty Array</span></b>
+    <br><br>
+    <hr>
+    <h3>Enter the Object</h3>
+    Enter the key-value pair of the object: 
+    <br><br>
+    Enter the key:
+    <input id="ObjKey" placeholder="Object Key">
+    <br><br>
+    Enter the value:
+    <input id="ObjVal" placeholder="Object Value">
+    <br><br>
+    <button id = "AddOBj" onclick = "AddObj()">Add Object</button>
+    <br><br>
+    <hr>
+    <h3>View Array Elements</h3>
+    Click the button to generate the table
+    <button id = "checkArray" onclick = "checkArray()">Check Array</button>
+    <br><br>
+    <span id="TableOutput"></span>
+    <hr>
+    <button id = "reset" onclick = "window.location.reload()">reset</button>
+    <script>
+        const Arr = new Array();
+        function AddElement() {
+            let Element = document.getElementById("arrEle").value;
+            let len = document.getElementById("arrlen").value;
+            if(Arr.length >= len) {
+                alert("You are trying to Add more elements than the Array Length!")
+            } else {
+                Arr.push(Element);
+                document.getElementById("ArrOut").innerHTML = JSON.stringify(Arr);
+            }
+        }
+
+        function AddObj() {
+            var obj = new Object();
+            let key = document.getElementById("ObjKey").value;
+            let val = document.getElementById("ObjVal").value;
+            let len = document.getElementById("arrlen").value;
+            obj.key = key;
+            obj.val = val;
+            if(Arr.length >= len) {
+                alert("You are trying to Add more elements than the Array Length!");
+            } else {
+                Arr.push(obj);
+                document.getElementById("ArrOut").innerHTML = JSON.stringify(Arr);
+            }
+        }
+
+        function checkArray() {
+            var table;
+            table='<center><table id="tablestyle" style="text-align: center"><tr><td>Sr. No.</td><td>Element</td><td>Type Of Element</td><td>Is Array?</td></tr>';
+            for(i = 0;i < Arr.length; i++){
+                table += '<tr><td>'+(i+1)+'</td><td>'+JSON.stringify(Arr[i])+'</td><td>'+typeof(Arr[i])+'</td><td>'+Array.isArray(Arr[i])+'</td></tr>';
+            }
+            table += '</table></center>';
+            document.getElementById("TableOutput").innerHTML = table;
+        }
+    </script>
+</body>
+</html>

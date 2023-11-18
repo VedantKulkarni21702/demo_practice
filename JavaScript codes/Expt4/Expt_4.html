@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<script src="Expt_4.js"></script>
+
+<center>
+    <h1>String Comparison </h1>
+</center>
+
+<body>
+    <center>
+        <!-- LocaleCompare -->
+        <h3>Using LocalCompare</h3>
+        Enter First String : <input type="string" id="str11"></inputtype>
+        <br><br>
+        Enter Second String : <input type="string" id="str12"></inputtype>
+        <br><br>
+        <button onclick="compLocal()">Compare Using (Local Compare)</button>
+        <br><br>
+        <p id="output1"></p>
+        <hr>
+
+        <!-- RegEx -->
+        <h3> Using RegEx</h3>
+        Enter First String : <input type="string" id="str21"></inputtype>
+        <br><br>
+        Enter Second String : <input type="string" id="str22"></inputtype>
+        <br><br>
+        <button onclick="compRegEx()">Compare (Using RegEx)</button>
+        <br><br>
+        <p id="output2"></p>
+        <hr>
+
+        <!-- Length & == Operator -->
+        <h3> Using Length & == Operator</h3>
+        Enter First String : <input type="string" id="str31"></inputtype>
+        <br><br>
+        Enter Second String : <input type="string" id="str32"></inputtype>
+        <br><br>
+        <button onclick="compEqEq()">Compare (Using ==)</button>
+        <br><br>
+        <p id="output31"></p>
+        <p id="output32"></p>
+        <hr>
+
+        <!-- === Operator -->
+        <h3> Using === Operator</h3>
+        Enter First String : <input type="string" id="str41"></inputtype>
+        <br><br>
+        Enter Second String : <input type="string" id="str42"></inputtype>
+        <br><br>
+        <button onclick="compEqEqEq()">Compare (Using ===)</button>
+        <br><br>
+        <p id="output4"></p>
+        <hr>
+    </center>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 6</title>
+</head>
+<body id = "body" style = "text-align:center;">
+    <H2>JavaScript Experiment 6</H2>
+
+        <H4>Name: Vedant Kulkarni <br> Roll No: 42438 <br> Batch: Q8</H4>
+        Please enter the Array to begin operations
+        <br><br>
+
+        <h3>Enter the Array</h3>
+        Enter the length of the array: 
+        <input id="arrlen" placeholder="Array Length">
+        <br><br>
+        Enter an Element and click add element: 
+        <input id="arrEle" placeholder="Array Element">
+        <br><br>
+        <button id = "AddElement" onclick = "AddElement()">Add Element</button>
+        <br><br>
+        The Array is now: <b>[<span id="ArrOut">Empty Array</span>]</b>
+        <br><br>
+        <hr>
+
+        <h3>Array searching operations</h3>
+        <h4>Using User-defined Logic</h4>
+        Enter the element to search: 
+        <input id="searchEle1" placeholder="Element to Search">
+        <br><br>
+        <button id = "SearchEleBut1" onclick = "SearchElement1()">Search Element</button>
+        <br><br>
+        The Element is at the index: <b><span id="SearchOut1"></span></b>
+        <br><br>
+        <h4>Using In-built Logic</h4>
+        Enter the element to search: 
+        <input id="searchEle2" placeholder="Element to Search">
+        <br><br>
+        <button id = "SearchEleBut2" onclick = "SearchElement2()">Search Element</button>
+        <br><br>
+        The Element is at the index: <b><span id="SearchOut2"></span></b>
+        <br><br>
+        <hr>
+
+        <h3>Array delete operations</h3>
+        <h4>Using User-defined Logic</h4>
+        Enter the element to delete: 
+        <input id="delEle1" placeholder="Element to Delete">
+        <br><br>
+        <button id = "DelEleBut1" onclick = "DelElement1()">Delete Element</button>
+        <br><br>
+        The Array after deletion is: <b>[<span id="DelOut1">Empty Array</span>]</b>
+        <h4>Using In-built Logic</h4>
+        Enter the element to delete: 
+        <input id="delEle2" placeholder="Element to Delete">
+        <br><br>
+        <button id = "DelEleBut2" onclick = "DelElement2()">Delete Element</button>
+        <br><br>
+        The Array after deletion is: <b>[<span id="DelOut2">Empty Array</span>]</b>
+        <br><br>
+        <hr>
+        
+        <h3>Array Empty operations</h3>
+        <h4>Using User-defined Logic</h4>
+        <button id = "EmptyBut1" onclick = "empty1()">Empty Array</button>
+        <br><br>
+        The Array after emptying is: <b>[<span id="emptyOut1"></span>]</b>
+        <h4>Using In-built Logic</h4>
+        <button id = "EmptyBut2" onclick = "empty2()">Empty Array</button>
+        <br><br>
+        The Array after emptying is: <b>[<span id="emptyOut2"></span>]</b>
+        <br><br>
+        <hr>
+        <button id = "reset" onclick = "window.location.reload()">reset</button>
+        <script src="arrayopr.js"></script>
+</body>
+</html>

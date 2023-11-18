@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        #over,
+        #focus {
+            border: 1px solid rgb(3, 2, 2);
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <H4>Name: Vedant Kulkarni <br> Roll No: 42438 <br> Batch: Q8</H4>
+    <hr>
+    
+    
+    <div class="flex-container">
+        <div id="over">
+            <h4>On Mouse Over Event</h4>
+            <button onmouseover="mouseover()">Hover Over Me</button>
+        </div>
+        <div id="focus">
+            <h4>On Focus Event</h4>
+            <input type="text" onfocus="focusele()">
+            <!--<input type="text" id="onfocus">-->
+        </div>
+    </div>
+    <script>
+        function mouseover() {
+            document.getElementById("over").style.backgroundColor = "#f96167";
+        }
+        function focusele() {
+            document.getElementById("focus").style.backgroundColor = "#fce77d";
+        }
+
+        /*document.getElementById('onfocus').addEventListener("focus", focusele);
+        function focusele(){
+            document.getElementById("focus").style.backgroundColor = "#fce77d";
+        }*/
+    </script>
+</body>
+</html>
